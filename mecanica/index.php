@@ -34,23 +34,25 @@ switch ($action) {
             $clienteController->salvar();
             break;
 
-    case 'registrar_itens':
-        $itemController = new ItemController($pdo);
-        $itemController->criar();
-        break;
+            case 'registrar_itens':
+                $itemController = new ItemController($pdo);
+                $itemController->criar();
+                break;
 
-    case 'listar_itens':
-        $itemController = new ItemController($pdo);
-        $itemController->listar();
-        break;
+        case 'listar_itens':
+             $itemController = new ItemController($pdo);
+             $itemController->listar();
+            break;
 
         case 'salvar_item':
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                $itemController = new ItemController($pdo);
-                $itemController->salvar();
-            } else {
-                echo "Método de solicitação inválido.";
-            }
+             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $produto = $_POST['produto'];
+            $quantidade = $_POST['quantidade'];
+            $itemController = new ItemController($pdo);
+            $itemController->salvar_item($produto, $quantidade);
+            header('Location: /mecanica/mecanica/index.php');
+        }
+
             break;    
 
     default:

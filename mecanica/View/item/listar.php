@@ -35,22 +35,21 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
+                    
                     <th>Nome</th>
                     <th>Quantidade</th>
-                    <th>Preço</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 <?php
                 // Suponha que $itens é um array de itens passado pelo controlador
                 foreach ($itens as $item) {
-                    echo "<tr>";
-                    echo "<td>{$item['id']}</td>";
-                    echo "<td>{$item['nome']}</td>";
-                    echo "<td>{$item['quantidade']}</td>";
-                    echo "<td>{$item['preco']}</td>";
-                    echo "</tr>";
+                     echo "<tr>";
+                     echo "<td>{$item['produto']}</td>";
+                     echo "<td>{$item['quantidade']}</td>";
+                    //echo "<td>{$item['preco']}</td>";
+                     echo "</tr>";
                 }
                 ?>
             </tbody>

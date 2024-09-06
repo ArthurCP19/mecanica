@@ -20,7 +20,7 @@ class PedidoController {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $cliente_id = $_POST['cliente_id'];
             $this->pedidoModel->criar($cliente_id);
-            header('Location: /mecanica/public/index.php');
+            header('Location: /mecanica-1/mecanica/index.php');
         }
         $clientes = $this->clienteModel->listar();
         require 'View/pedido/criar.php';

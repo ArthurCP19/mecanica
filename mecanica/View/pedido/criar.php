@@ -42,7 +42,7 @@
 <body>
     <div class="container">
         <h1>Criar Novo Pedido</h1>
-        <form action="index.php?action=registrar_pedido" method="post">
+        <form action="index.php?action=solicitar_pedido" method="post">
             <label for="cliente">Cliente:</label>
             <select id="cliente" name="cliente_id" required>
                 <!-- Exemplo: Preencha com opções dinâmicas dos clientes -->
@@ -56,7 +56,7 @@
             <label for="data">Data:</label>
             <input type="date" id="data" name="data" required>
             
-            <button type="submit">Cadastrar Pedido</button>
+            <input type="submit" value="Cadastrar Pedido">
         </form>
     </div>
 </body>

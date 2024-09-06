@@ -31,7 +31,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Listagem de Pedidos</h1>
+        <h1>Listagem de Pedidos </h1>
         <table>
             <thead>
                 <tr>
@@ -46,8 +46,8 @@
                 foreach ($pedidos as $pedido) {
                     echo "<tr>";
                     echo "<td>{$pedido['id']}</td>";
-                    echo "<td>{$pedido['data']}</td>";
-                    echo "<td>{$pedido['nome_cliente']}</td>";
+                    echo "<td>{$pedido['data_pedido']}</td>";
+                    echo "<td>{$pedido['nome']}</td>";
                     echo "</tr>";
                 }
                 ?>
